@@ -5,8 +5,8 @@ import Polygon from 'ol/geom/Polygon';
 import Icon from 'ol/style/Icon';
 import Fill from 'ol/style/Fill';
 import Stroke from 'ol/style/Stroke';
-import Memory from './models/memory';
-import Camera from './models/camera';
+import Memory from './models/Memory';
+import Camera from './models/Camera';
 import hexRgb from 'hex-rgb';
 
 // --- ---
@@ -24,8 +24,8 @@ function createCircleSectorPolygon(center, radius, startAngle, endAngle, segment
   const coords = [];
   coords.push(center);
 
-  const startRad = (startAngle - 270) * (Math.PI / 180);
-  const endRad = (endAngle - 270) * (Math.PI / 180);
+  let startRad = (startAngle - 270) * (Math.PI / 180);
+  let endRad = (endAngle - 270) * (Math.PI / 180);
   if (endRad < startRad) endRad += 2 * Math.PI;
 
   const jump = (endRad - startRad) / segments;

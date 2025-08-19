@@ -2,7 +2,7 @@ import './camera-editor.css';
 import { mapAPI } from '../map/map';
 import { removeFromDOM } from '../../utils';
 import InputKnob from 'input-knob';
-import Memory from '../../models/memory';
+import Memory from '../../models/Memory';
 import { Translate } from 'ol/interaction';
 import { Collection } from 'ol';
 
