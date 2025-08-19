@@ -1,0 +1,78 @@
+/* styles common to all navbar icons */
+
+.navbar-icon {
+  background-color: transparent;
+
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+/* styles for icon glow */
+.navbar-icon-svg {
+  filter:
+    drop-shadow(0 0 3px black)
+    drop-shadow(0 0 5px orange)
+    drop-shadow(0 0 15px rgba(255, 165, 0, 0.2))
+    drop-shadow(0 0 30px rgba(255, 140, 0, 0.05));
+  fill: #ffaa00;
+}
+@keyframes pulse-glow {
+  0% {  /* .navbar-icon-svg styles copy-paste */
+    filter:
+      drop-shadow(0 0 3px #0000ff)
+      drop-shadow(0 0 5px orange)
+      drop-shadow(0 0 15px rgba(255, 165, 0, 0.2))
+      drop-shadow(0 0 30px rgba(255, 140, 0, 0.05));
+    fill: #ffaa00;
+  }
+  50% {
+    filter:
+      drop-shadow(0 0 3px black)
+      drop-shadow(0 0 5px orange)
+      drop-shadow(0 0 15px rgba(235, 153, 2, 0.8))
+      drop-shadow(0 0 30px rgba(235, 153, 2, 0.8));
+  }
+  100% {  /* .navbar-icon-svg styles copy-paste */
+    filter:
+      drop-shadow(0 0 3px #0000ff)
+      drop-shadow(0 0 5px orange)
+      drop-shadow(0 0 15px rgba(255, 165, 0, 0.2))
+      drop-shadow(0 0 30px rgba(255, 140, 0, 0.05));
+    fill: #ffaa00;
+  }
+}
+.navbar-icon-svg:hover {
+  animation-name: pulse-glow;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+}
+.navbar-icon-svg:active {
+  filter:
+    drop-shadow(0 0 3px #5aaeb8)
+    drop-shadow(0 0 5px orange)
+    drop-shadow(0 0 10px rgba(255, 165, 0, 0.05))
+    drop-shadow(0 0 20px rgba(255, 140, 0, 0.025)) !important;
+  fill: #ffaa00 !important;
+  /* whithout the important rule these styles won't take place until
+    the user starts a drag motion, instead of taking place inmediately
+    after clicking */
+}
+
+.navbar-icon-size1 {
+  width: 80px;
+  height: 80px;
+}
+.navbar-icon-size2 {
+  width: 30px;
+  height: 30px;
+}
+.navbar-icon-size3 {
+  width: 22px;
+  height: 22px;
+}

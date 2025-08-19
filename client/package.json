@@ -1,0 +1,19 @@
+{
+  "name": "surveillance_mapper",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8"
+  },
+  "dependencies": {
+    "file-saver": "^2.0.5",
+    "hex-rgb": "^5.0.0",
+    "input-knob": "^0.0.11",
+    "interactjs": "^1.10.27",
+    "ol": "10.2.1"
+  }
+}

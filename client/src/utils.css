@@ -1,0 +1,55 @@
+/* confirmation popup styles */
+
+.confirm-popup {
+  background-color: rgba(0, 0, 0, 0.7);
+
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background: linear-gradient(
+    rgb(34 30 37 / 95%),
+    rgb(48 47 64 / 95%),
+    rgb(56 53 83 / 90%)
+  );
+  color: white;
+  text-align: center;
+  font-family: Lato;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1.5em;
+
+  width: 300px;
+}
+.popup-message {
+  font-size: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+.popup-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.confirm-popup .action-button {
+  color: white;
+  border-radius: 5px;
+  font-size: 0.9em;
+  padding: 0.5em 1em;
+
+
+  cursor: pointer;
+}
+.confirm-popup .action-button:hover {
+  background-color: #4c4a63;
+}

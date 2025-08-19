@@ -1,0 +1,164 @@
+.tooltip-menu {
+  background: linear-gradient(
+    rgb(34 30 37 / 90%),
+    rgb(48 47 64 / 90%),
+    rgb(56 53 83 / 80%),
+    95%,
+    transparent
+  );
+  color: white;
+  font-family: Lato;
+  font-weight: bold;
+  border: 1px solid #ccc;
+
+  width: 250px;
+  min-height: 200px; /* this height might guarantee that the inputs will fit in the tooltip */
+  position: absolute;
+  z-index: 1;
+
+  padding: 0.95em 2em;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.tooltip-menu label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tooltip-menu input[type="number"],
+.tooltip-menu input[type="range"] {
+  background-color: #3b3a53;
+  color: #fff;
+  border: 1px solid #5a5779;
+  border-radius: 5px;
+
+  width: 60px;
+
+  padding: 3px 6px;
+}
+.tooltip-menu input[type="color"] {
+  appearance: none;
+  background-color: transparent;
+
+  border: 1px solid #5a5779;
+  border-radius: 5px;
+
+  width: 25px;
+  height: 25px;
+
+  padding: 0;
+
+  cursor: pointer;
+}
+.tooltip-menu .color-buttons button {
+  border: 1px solid #5a5779;
+  border-radius: 50%;
+
+  width: 20px;
+  height: 20px;
+
+  margin-right: 5px;
+  padding: 0;
+
+  cursor: pointer;
+}
+.tooltip-menu .color-buttons {
+  display: flex;
+  align-items: center;
+}
+
+/* move and delete */
+.menu-actions {
+  margin-bottom: 15px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.drag-toggle-button, .action-button {
+  border: 1px solid #5a5779;
+  background-color: #3b3a53;
+  border-radius: 5px;
+  padding: 0.5em;
+}
+.action-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+.drag-toggle-button input[type="checkbox"] {
+  display: none;
+}
+.icon-container {
+  color: white;
+
+  width: 24px;
+  height: 24px;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.drag-toggle-button input[type="checkbox"]:checked + .icon-container {
+  color: #ffaa00;
+}
+.action-button:hover,
+.drag-toggle-button:hover .icon-container {
+  background-color: #4c4a63;
+}
+#fov {
+  accent-color: #ffaa00;
+}
+
+
+/* knob input */
+.tooltip-menu .knob-container {
+  width: 4.5rem;
+  height: 4.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tooltip-menu input-knob {
+  background: linear-gradient(180deg, #2f2a3a, #222129);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.5);  
+  margin: 0;
+  border-radius: 100%;
+
+  width: 4.5rem;
+  height: 4.5rem;
+  position: relative;
+
+  display: block;
+}
+.tooltip-menu input-knob::part(rotator) {
+  background: #2f2a3a;
+  border: 0.5rem double #2f2a3a;
+  border-bottom: 0.75rem solid #2f2a3a;
+  border-radius: 100%;
+
+  box-sizing: border-box;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.tooltip-menu input-knob.fallback > span.fallback {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.tooltip-menu .mark {
+  font-size: 1rem;
+  color: #ffaa00;
+  line-height: 1;
+
+  top: 0%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+
+  pointer-events: none;
+}
