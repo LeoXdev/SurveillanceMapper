@@ -1,4 +1,4 @@
-import Memory from "../../models/memory";
+import Memory from "../../models/Memory";
 import { showConfirmPopup } from "../../utils";
 import { mapAPI } from "../map/map";
 import { unselect } from "./camera-editor";
