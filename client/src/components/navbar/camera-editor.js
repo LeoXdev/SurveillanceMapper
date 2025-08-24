@@ -130,7 +130,7 @@ function showTooltipMenu(feature, featureCoordinate, pixel) {
     };
   }
 
-  const camera = Memory.getInstance().getById(feature.get('id'));
+  const camera = Memory.getInstance().getById(feature.get('id'), true);
 
   // tooltip input's events, update memory and feature
   const dragToggle = menu.querySelector('#drag-toggle');
@@ -151,7 +151,7 @@ function showTooltipMenu(feature, featureCoordinate, pixel) {
     if (translateInteraction) {
       translateInteraction.on('translateend', (event) => {
         const newPos = event.features.getArray()[0].getGeometry().getCoordinates();
-        const camera = Memory.getInstance().getById(editingFeature);
+        const camera = Memory.getInstance().getById(editingFeature, true);
         camera.position = newPos;
         feature.changed();
       });
@@ -160,7 +160,8 @@ function showTooltipMenu(feature, featureCoordinate, pixel) {
   const deleteButton = menu.querySelector('#delete-button');
   deleteButton.addEventListener('click', () => {
     unselect();
-    Memory.getInstance().remove(feature.get('id'));
+    const el = Memory.getInstance().getById(feature.get('id'), false);
+    Memory.getInstance().remove(el);
     mapAPI.removeFeature(feature);
   });
 

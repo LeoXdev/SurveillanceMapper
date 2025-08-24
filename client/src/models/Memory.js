@@ -20,14 +20,17 @@ export default class Memory {
   clear() {
     this.items = [];
   }
-  getById(id) {
-    // binsearch to get a camera by its id
+  getById(id, camera) {
+    // binsearch to get a camera/index on memory by its id
     let a = this.items;
     let l = 0;
     let r = a.length - 1;
     while (l <= r) {
       let m = Math.trunc(l + (r - l) / 2);
-       if (a[m] && a[m].id == id) return a[m];
+       if (a[m] && a[m].id == id) {
+        if (camera) return a[m];
+        else return m;
+      }
        if (a[m] && a[m].id > id) {
         r = m - 1;
       } else {
@@ -96,6 +99,19 @@ export default class Memory {
   }
   generateId() {
     if (this.items.length == 0) return 1;
-    return this.items[this.items.length - 1].id + 1;
+
+    // this.remove(id) leaves elements in array as undefined,
+    // this method safely returns the last id
+    let last = -1;
+    let a = this.items;
+    for (let i = a.length - 1; i >= 0; i--) {
+      if (a[i]) {
+        last = a[i].id;
+        break;
+      }
+    }
+
+    if (last == -1) return 1;
+    return last + 1;
   }
 }

@@ -56,8 +56,6 @@ export const mapAPI = {
   getFeaturesAtPixel: (pixel) => {
     const features = [];
     map.forEachFeatureAtPixel(pixel, (feature) => { features.push(feature); });
-    // Ordenar por z-index (mayor primero)
-    // ! esta mal esto, debo hacer que la feature con mayor zIndex este en [0]
     return features.sort((a, b) => {
       const aZ = a.get('zIndex');
       const bZ = b.get('zIndex');
