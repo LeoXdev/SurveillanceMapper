@@ -3,17 +3,17 @@
 @font-face {
   font-family: 'Lato';
   font-weight: normal;
-  src: url('./fonts/Lato-Regular.ttf') format('truetype');
+  src: url('/SurveillanceMapper/fonts/Lato-Regular.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-weight: bold;
-  src: url('./fonts/Lato-Bold.ttf') format('truetype');
+  src: url('/SurveillanceMapper/fonts/Lato-Bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'Lato';
   font-weight: 300;
-  src: url('./fonts/Lato-Light.ttf') format('truetype');
+  src: url('/SurveillanceMapper/fonts/Lato-Light.ttf') format('truetype');
 }
 
 html,
