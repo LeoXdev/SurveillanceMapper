@@ -37,6 +37,16 @@ export default class Memory {
         l = m + 1;
       }
     }
+    // fallback linear search
+    for (let i = 0; i < a.length; i++) {
+      const el = a[i];
+      if (el) {
+        if (el.id == id) {
+          if (camera) return a[i];
+          else return i;
+        }
+      }
+    }
     return -1;
   }
   remove(id) {
