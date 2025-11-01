@@ -1,9 +1,9 @@
 import './navbar.css';
-import './navbar-icons.css';
-import CameraButton from './camera-button';
-import SaveButton from './save-button';
-import LoadButton from './load-button';
-import DeleteAllButton from './delete-all-button';
+import './buttons/navbar-icons.css';
+import CameraButton from './buttons/camera-button';
+import SaveButton from './buttons/save-button';
+import LoadButton from './buttons/load-button';
+import DeleteAllButton from './buttons/delete-all-button';
 
 export default class Navbar {
   // constructor must take a selector which finds the element to insert the component in

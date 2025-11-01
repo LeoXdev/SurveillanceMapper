@@ -1,6 +1,6 @@
 import { createCameraFeature } from "../utils";
 import { mapAPI } from "../components/map/map";
-import { unselect } from "../components/navbar/camera-editor";
+import { unselect } from "../components/camera-editor/camera-editor";
 
 let instance = null;
 export default class Memory {

@@ -1,4 +1,4 @@
-import Memory from "../../models/Memory";
+import Memory from "../../../models/Memory";
 
 export default class LoadButton {
   constructor() { }

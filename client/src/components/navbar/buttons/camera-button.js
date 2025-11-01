@@ -1,5 +1,5 @@
-import { mapAPI } from '../map/map';
-import { createCameraFeature } from '../../utils';
+import { mapAPI } from '../../map/map';
+import { createCameraFeature } from '../../../utils';
 import interact from 'interactjs';
 
 export default class CameraButton {

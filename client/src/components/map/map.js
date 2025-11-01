@@ -73,4 +73,4 @@ export const mapAPI = {
   onMapClick: (callback) => map.on('click', callback),
 }
 // import feature editor after map is ready
-import('../navbar/camera-editor');
+import('../camera-editor/camera-editor');

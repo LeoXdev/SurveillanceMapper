@@ -1,7 +1,7 @@
-import Memory from "../../models/Memory";
-import { showConfirmPopup } from "../../utils";
-import { mapAPI } from "../map/map";
-import { unselect } from "./camera-editor";
+import Memory from "../../../models/Memory";
+import { showConfirmPopup } from "../../../utils";
+import { mapAPI } from "../../map/map";
+import { unselect } from "../../camera-editor/camera-editor";
 
 export default class DeleteAllButton {
   constructor() { }
